@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import Header from "./_components/header";
 
 const ubuntu = Ubuntu({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Boilerplate v2 - SWISS CODE L.L.C.",
-  description: "Boilerplate for SWISS CODE L.L.C.",
+  title: "Computer Graphics HS24 - Pascal Derungs",
+  description: "Computer Graphics HS24 - Pascal Derungs",
 };
 
 export default function RootLayout({
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>{children}</body>
+      <body className={`${ubuntu.className} min-h-screen overflow-x-hidden`}>
+        <Header></Header>
+        {children}
+      </body>
     </html>
   );
 }
