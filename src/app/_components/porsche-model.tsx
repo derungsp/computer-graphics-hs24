@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { Color, Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
-export const PorscheExample: React.FC = () => {
+export const Porsche: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(true);
   const [environment, setEnvironment] = useState<string | null>(null);
   const toggleAnimation = () => setIsAnimating(!isAnimating);
@@ -45,7 +45,7 @@ export const PorscheModel: React.FC<PorscheModelProps> = ({
   environment,
   setEnvironment,
 }) => {
-  const porscheModel = useLoader(GLTFLoader, "/porsche_911_gt3.glb");
+  const porscheModel = useLoader(GLTFLoader, "/935.glb");
   const modelRef = useRef<Mesh>(null);
 
   const [lightParams, setLightParams] = useState({
