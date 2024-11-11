@@ -72,8 +72,6 @@ export const PorscheModel: React.FC<PorscheModelProps> = ({
 
   useEffect(() => {
     const gui = new GUI();
-
-    // Environment controls
     const envFolder = gui.addFolder("Environment");
     const environments = [
       "sunset",
@@ -93,7 +91,6 @@ export const PorscheModel: React.FC<PorscheModelProps> = ({
         setEnvironment(value === "none" ? null : value),
       );
 
-    // GUI controls for lights
     const pointLightFolder = gui.addFolder("Point Light");
     pointLightFolder
       .addColor(lightParams.pointLight, "color")
@@ -337,14 +334,7 @@ export const PorscheModel: React.FC<PorscheModelProps> = ({
     return () => {
       gui.destroy();
     };
-  }, [
-    setEnvironment,
-    environment,
-    lightParams.ambientLight,
-    lightParams.directionalLight,
-    lightParams.pointLight,
-    lightParams.spotLight,
-  ]);
+  }, [setEnvironment, environment]);
 
   useFrame((_state, delta) => {
     if (isAnimating && modelRef.current) {
