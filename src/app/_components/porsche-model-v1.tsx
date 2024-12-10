@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { Color, Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
-export const Porsche: React.FC = () => {
+export const PorscheV1: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(true);
   const [environment, setEnvironment] = useState<string | null>(null);
   const toggleAnimation = () => setIsAnimating(!isAnimating);
