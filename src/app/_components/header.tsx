@@ -13,8 +13,10 @@ const Header = () => {
         </Link>
         <div className="items-center space-x-10">
           <MenuItem href="/">Home</MenuItem>
-          <MenuItem href="/project-v1">Porsche 935 V1</MenuItem>
-          <MenuItem href="/project-v2">Porsche 935 V2</MenuItem>
+          <MenuItem href="/project-v0">935 V0</MenuItem>
+          <MenuItem href="/project-v1">935 V1</MenuItem>
+          <MenuItem href="/project-v2">935 V2</MenuItem>
+          <MenuItem href="/project-v3">935 V3</MenuItem>
         </div>
       </div>
     </header>
